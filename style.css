@@ -1,0 +1,493 @@
+/* ==========================================
+   STOCK MARKET DASHBOARD
+   style.css - Part 1
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#0f172a;
+    color:white;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+        NAVBAR
+=========================== */
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 50px;
+
+    background:#111827;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:#22c55e;
+
+}
+
+.search-box{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.search-box input{
+
+    width:280px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    outline:none;
+
+    background:#1e293b;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.search-box button{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#22c55e;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.search-box button:hover{
+
+    background:#16a34a;
+
+}
+
+/* ===========================
+        HEADER
+=========================== */
+
+header{
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+header h1{
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+header p{
+
+    color:#94a3b8;
+
+    font-size:18px;
+
+}
+/* ===========================
+        CARDS
+=========================== */
+
+.cards{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.card{
+
+    background:#1e293b;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.card h3{
+
+    color:#94a3b8;
+
+    margin-bottom:15px;
+
+}
+
+.card h2{
+
+    font-size:30px;
+
+    color:#22c55e;
+
+}
+
+/* ===========================
+    COMPANY SECTION
+=========================== */
+
+.company{
+
+    width:90%;
+
+    margin:40px auto;
+
+    background:#1e293b;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+.company h2{
+
+    margin-bottom:15px;
+
+}
+
+.company p{
+
+    color:#cbd5e1;
+
+    line-height:1.7;
+
+}
+/* ===========================
+        CHART
+=========================== */
+
+.chart-container{
+
+    width:90%;
+
+    margin:40px auto;
+
+    background:#1e293b;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+canvas{
+
+    width:100% !important;
+
+    height:450px !important;
+
+}
+
+/* ===========================
+        WATCHLIST
+=========================== */
+
+.watchlist{
+
+    width:90%;
+
+    margin:auto;
+
+    margin-bottom:40px;
+
+    background:#1e293b;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+.watchlist ul{
+
+    list-style:none;
+
+}
+
+.watchlist li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:15px;
+
+    margin:10px 0;
+
+    background:#0f172a;
+
+    border-radius:10px;
+
+}
+
+/* ===========================
+        FOOTER
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#94a3b8;
+
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+nav{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.search-box{
+
+width:100%;
+
+}
+
+.search-box input{
+
+width:100%;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+header h1{
+
+font-size:30px;
+
+}
+
+canvas{
+
+height:300px !important;
+
+}
+
+}
+/* ===========================
+   WATCHLIST BUTTON
+=========================== */
+
+#watchBtn{
+
+    margin-top:20px;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+#watchBtn:hover{
+
+    background:#16a34a;
+
+}
+
+.open-btn{
+
+    padding:8px 12px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    cursor:pointer;
+
+    margin-right:8px;
+
+}
+
+.delete-btn{
+
+    padding:8px 12px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#ef4444;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+/* ======================================
+MARKET OVERVIEW
+====================================== */
+
+.market-overview{
+
+    width:90%;
+    margin:30px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.market-card{
+
+    background:#1e293b;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+}
+
+.market-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.market-card h3{
+
+    color:#94a3b8;
+
+    margin-bottom:10px;
+
+}
+
+.market-card h2{
+
+    color:#22c55e;
+
+}
+
+@media(max-width:900px){
+
+.market-overview{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.market-overview{
+
+grid-template-columns:1fr;
+
+}
+
+}
